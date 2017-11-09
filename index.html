@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="text/basic.css" type="text/css"/>
+    <link rel="stylesheet" href="text/index.css" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ido.ac.cn/images/favicon.ico" data-reactid="10"/>
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript"
+            src="http://www.ido.ac.cn/login/js/common/jquery.form.js"></script>
+    <script type="text/javascript" src="http://www.ido.ac.cn/login/js/common/zoom.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+
+
+    <title>OVO直供平台 </title>
+</head>
+<body>
+    <div class="toper">
+        <div class="toper_login">
+            "您好，欢迎来到OVO直供网！"
+            <a href="#login" data-toggle="login" class="a">[请登录]</a>
+            <a href="/signUp.html">[现在注册]</a>
+        </div>
+        <div class="toper_link">
+            <div class="toper_cart">
+                <a href="/cart.html">购物车
+                    <span class="badge">5</span></a>
+                <a href="/order.html">我的订单<span class="badge">2</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- 顶栏结束-->
+
+    <div class="header">
+        <div class="header-left">
+            <img src="http://www.ido.ac.cn/images/ovo.png" class="header-logo"/>
+            <a href="/index.html" class="header-title">OVO</a>
+            <p class="header-title-motto">移动终端一站采购平台</p>
+        </div>
+        <div class="header-middle">
+            <input class="search_Box" type="text" value placeholder="请输入商品进行搜索" name="keyword" id="keyword">
+            <div class="header-middle-right">
+                <input type="button" class="search_Btn" value="搜索" onclick="">
+            </div>
+
+        </div>
+        <div class="header-right">
+            <img class="header-contract" src="">
+        </div>
+    </div>
+    <!-- 快捷栏 -->
+    <!--
+    <ul class="nav  nav-tabs nav-justified nav_new">
+        <li class="active" style="background-color: #FFAE00"><a href="#">所有产品分类</a></li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">热门机型</a></li>
+        <li><a href="#">苹果专区</a></li>
+        <li><a href="#">安卓专区</a></li>
+        <li><a href="#">我的直供</a></li>
+    </ul><br><br><br>
+-->
+    <div class="navg nav">
+        <div class="nav_cate" id="nav_cate" >
+            <button type="button" class="btn nav_category_title dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">所有产品分类</button>
+            <ul class="dropdown-menu nav_categ" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation" class="dropdown-header">热销手机</li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="">iPhoneX</a>
+                    <a role="menuitem" tabindex="-1" href="">MIX 2</a>
+                    <a role="menuitem" tabindex="-1" href="">iPhone8</a>
+                    <a role="menuitem" tabindex="-1" href="">HUAWEI MATE 9</a>
+                    <a role="menuitem" tabindex="-1" href="">OPPO R11s</a>
+                </li>
+                <li class="divider" role="presentation"></li>
+                <li role="presentation" class="dropdown-header">
+                    手机品牌
+                </li>
+                <li role="presentation" >
+                    <a role="menuitem" tabindex="-1" href="">苹果</a>
+                    <a role="menuitem" tabindex="-1" href="">华为</a>
+                    <a role="menuitem" tabindex="-1" href="">小米</a>
+                    <a role="menuitem" tabindex="-1" href="">OPPO</a>
+                    <a role="menuitem" tabindex="-1" href="">VIVO</a>
+                    <a role="menuitem" tabindex="-1" href="">联想</a>
+                    <a role="menuitem" tabindex="-1" href="">魅族</a>
+                    <a role="menuitem" tabindex="-1" href="">三星</a>
+                    <a role="menuitem" tabindex="-1" href="">LG</a>
+                    <a role="menuitem" tabindex="-1" href="">索尼</a>
+                    <a role="menuitem" tabindex="-1" href="">一加</a>
+                </li>
+                <li class="divider" role="presentation"></li>
+                <li role="presentation" class="dropdown-header">
+                    价格预算
+                </li>
+                <li>
+                    <a role="menuitem" tabindex="-1" href="">5000元以上</a>
+                    <a role="menuitem" tabindex="-1" href="">3000-5000元</a>
+                    <a role="menuitem" tabindex="-1" href="">2000-3000元</a>
+                    <a role="menuitem" tabindex="-1" href="">2000元以内</a>
+                </li>
+                <li class="divider" role="presentation"></li>
+                <li role="presentation" class="dropdown-header">网络制式</li>
+                <li>
+                    <a role="menuitem" tabindex="-1" href="">移动4G  </a>
+                    <a role="menuitem" tabindex="-1"  href="">联通4G</a>
+                    <a role="menuitem" tabindex="-1" href="">电信4G  </a>
+                    <a role="menuitem" tabindex="-1" href="">全网通  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav_section">
+            <ul>
+                <li >
+                    <a class="active" href="/index.html">首页</a>
+                </li>
+                <li>
+                    <a href="">热门机型</a>
+                </li>
+
+                <li>
+                    <a href="">苹果专区</a>
+                </li>
+                <li>
+                    <a href="">安卓专区</a>
+                </li>
+                <li>
+                    <a href="">我的直供</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="nav_category">
+            <h2 class="category_title">
+                手机分类
+            </h2>
+            <div class="hot_sales">
+                <h3>
+                    热销手机
+                </h3>
+                <ul>
+                    <li><a href="">iPhoneX</a></li>
+                    <li><a href="">MIX 2</a></li>
+                    <li><a href="">iPhone8</a></li>
+                    <li><a href="">HUAWEI MATE 9</a></li>
+                    <li><a href="">OPPO R11s</a></li>
+                </ul>
+            </div>
+            <div class="brand">
+                <h3>
+                    手机品牌
+                </h3>
+                <ul>
+                    <li><a href="">苹果</a></li>
+                    <li><a href="">华为</a></li>
+                    <li><a href="">小米</a></li>
+                    <li><a href="">OPPO</a></li>
+                    <li><a href="">VIVO</a></li>
+                    <li><a href="">联想</a></li>
+                    <li><a href="">魅族</a></li>
+                    <li><a href="">三星</a></li>
+                    <li><a href="">LG</a></li>
+                    <li><a href="">索尼</a></li>
+                    <li><a href="">一加</a></li>
+                </ul>
+            </div>
+            <div class="price">
+                <h3>
+                    价格预算
+                </h3>
+                <ul>
+                    <li><a href="">5000元以上</a></li>
+                    <li><a href="">3000-5000元</a></li>
+                    <li><a href="">2000-3000元</a></li>
+                    <li><a href="">2000元以内</a></li>
+                </ul>
+            </div>
+            <div class="network">
+                <h3>网络制式</h3>
+                <ul>
+                    <li><a href="">移动4G  </a></li>
+                    <li><a href="">联通4G</a></li>
+                    <li><a href="">电信4G  </a></li>
+                    <li><a href="">全网通  </a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="banner" style="position: relative;overflow: hidden;width: 975px;">
+            <ul id="slider" class="slider">
+                <li >
+                    <a href="">
+                        <img src="http://www.ido.ac.cn/login/images/banner1.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="http://www.ido.ac.cn/login/images/banner2.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="http://www.ido.ac.cn/login/images/banner3.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="con"></div>
+            <div class="bx left">
+                <img src="images/left.png">
+            </div>
+            <div class="bx right">
+                <img src="images/right.png">
+            </div>
+            <div class="bx-pager">
+            </div>
+
+        </div>
+        <div class="more mb30">
+            <div class="new">
+                <a href=""><img src="http://www.ido.ac.cn/login/images/tag1.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href=""><img src="http://www.ido.ac.cn/login/images/tag2.jpg" alt=""></a>
+            </div>
+            <div>
+                <button  type="button" class="btn" data-toggle="collapse" data-target="#notice"   style="background-color: red"><img src="http://www.ido.ac.cn/login/images/tag3.jpg" alt=""></button>
+            </div>
+        </div>
+        <div class="panel-collapse collapse" id="notice">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="tabbable" id="tabs-527584">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#panel-266894" data-toggle="tab">热点资讯</a>
+                            </li>
+                            <li>
+                                <a href="#panel-92023" data-toggle="tab">促销资讯</a>
+                            </li>
+                            <li>
+                                <a href="#panel-920235" data-toggle="tab">奖励资讯</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="panel-266894">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>Tanmay</td>
+                                        <td>Bangalore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sachin</td>
+                                        <td>Mumbai</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="panel-92023">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>Tanmay</td>
+                                        <td>Bangalore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sachin</td>
+                                        <td>Mumbai</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="panel-920235">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>Tanmay</td>
+                                        <td>Bangalore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sachin</td>
+                                        <td>Mumbai</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product_list" >
+            <div class="index_title title_o">
+                <h2>
+                    热销手机
+                </h2>
+            </div>
+            <div class="index_product mb30" id="hot_sale">
+                <ul class="index_product_list">
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="index_product_ad"><a href=""><img src="http://www.189zg.cn/attachments/adv/415/129/%E7%95%85%E4%BA%AB7p.jpg" alt=""></a></div>
+            </div>
+            <div class="index_title title_b">
+                <h2>新品上市</h2>
+            </div>
+            <div class="index_product mb30" id="new_arrive">
+                <ul class="index_product_list">
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="http://www.189zg.cn/prodphoto/7/29668/29668_1496219768412_1.jpg" alt="" onerror="this.src='/images/js/base/nopic_1.jpg'"></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">魅族 魅蓝NOTE5 800M版 香槟金</a>
+                                    <h3>零售价：¥1590</h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="index_product_ad"><a href=""><img src="" alt=""></a></div>
+
+            </div>
+            <div class="index_title title_g">
+                <h2>特别推荐</h2>
+            </div>
+            <div class="index_product mb30" id="special_choice">
+                <ul class="index_product_list">
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href=""></a>
+                                    <h3></h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="index_product_ad"><a href=""><img src="" alt=""></a></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+
+    </div>
+    <div class="copyright">
+
+    </div>
+<!--    <div class="container">
+
+        <div class="login hide fade" id="login">
+            <h2 class="login_title">用户登陆</h2>
+            <div class="login_detail">
+                <img class="label" alt="账号" src="http://www.ido.ac.cn/login/images/account.png">
+                <input type="text" class="account" id="account" value placeholder="账号">
+                <img src="http://www.ido.ac.cn/login/images/key.png" alt="密码" class="label">
+                <input type="password" class="password" id="password"  value placeholder="密码">
+                <input type="text" class="valcode" id="valcode" value placeholder="验证码">
+                <img id="valpic" class="valpic" width="100px" height="32px" onclick="this.src='checkcode.php?nocache='+Math.random();" src="checkcode.php" alt="验证码">
+            </div>
+            <div class="login_submit">
+                <input type="button" class="logon" value="登陆">
+                <input type="button" class="signup" value="注册">
+            </div>
+            <div class="login_more">
+                <a href="" >忘记密码</a>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;"><div style="display:table; width:100%; height:100%;"><div style="vertical-align:middle; display:table-cell;"><div class="modal-dialog modal-sm" style="width:540px;">
+        <div class="modal-content" style="border: none;">
+            <div class="col-left"></div>
+            <div class="col-right">
+                <div class="modal-header">
+                    <button type="button" id="login_close" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="loginModalLabel" style="font-size: 18px;">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <section class="box-login v5-input-txt" id="box-login">
+                        <form id="login_form" action="" method="post" autocomplete="off">
+
+                            <ul>
+                                <li class="form-group"><input class="form-control" id="id_account_l" maxlength="50" name="account_l" placeholder="请输入邮箱账号/手机号" type="text"></li>
+                                <li class="form-group"><input class="form-control" id="id_password_l" name="password_l" placeholder="请输入密码" type="password"></li>
+
+                            </ul>
+                        </form>
+                        <p class="good-tips marginB10"><a id="btnForgetpsw" class="fr">忘记密码？</a>还没有账号？<a href="javascript:;" target="_blank" id="btnRegister">立即注册</a></p>
+                        <div class="login-box marginB10">
+                            <button id="login_btn" type="button" class="btn btn-micv5 btn-block globalLogin">登录</button>
+                            <div id="login-form-tips" class="tips-error bg-danger" style="display: none;">错误提示</div>
+                        </div>
+
+
+                        <div class="threeLogin"><span>其他方式登录</span><a class="nqq" href="javascript:;"></a><a class="nwx" href="javascript:;"></a><!--<a class="nwb"></a>--></div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://www.ido.ac.cn/login/js/common/Slider.js"></script>
+    <script src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/js/bootstrap-modal.js"></script>
+</body>
+</html>

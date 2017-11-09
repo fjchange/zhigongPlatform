@@ -1,0 +1,26 @@
+@charset "utf-8";
+body {
+    background:url(http://www.ido.ac.cn/login/images/background.jpg) ;
+}
+
+.login_wrap{position:absolute;width:350px;height: auto;margin-left:40%;margin-right:30%;margin-top:10%;margin-bottom:30%;background:RGBA(255,255,255,0.5);overflow: hidden;    -webkit-box-shadow: 2px 4px 3px 0 rgba(0,0,0,0.2) ;
+}
+h2{
+    color: #3a3a3a;
+}
+.login_title{padding-left:15px;height:42px;font-size:18px;color:#006698;line-height:42px;}
+.login_form{margin-top:-1px;padding:25px 0 15px 20px;}
+.login_form li{padding-bottom:15px;position:relative}
+.login_form li input{padding:8px 10px;border:1px solid #dae4eb;font-size:14px;}
+.login_form li label{position:absolute;left:12px;top:0;line-height:38px;font-size:14px;color:#cbd1d8}
+.img_code{margin:0 6px;vertical-align:middle}
+.login_btn{padding:10px 0 30px}
+.login_btn input{width:180px;height:auto;background-color:#0765d5;border:1px solid #8db1d9;border-radius:4px;font-size:16px;font-weight:700;color:#fff;cursor:pointer}
+.login_btn input:hover{background-color:#4277b8;width:180px;height:auto;border:1px solid #8db1d9;border-radius:4px;font-size:16px;font-weight:700;}
+.login_link{width:305px;text-align:right}
+.login_link a{margin:0 5px}
+.login_wrap .error{color:red}
+li{
+    text-decoration: none;
+    list-style: none;
+}

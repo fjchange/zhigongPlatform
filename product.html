@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="text/zzsc.css" type="text/css"/>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ido.ac.cn/images/favicon.ico" data-reactid="10"/>
+    <link rel="stylesheet" href="text/basic.css" type="text/css" />
+    <link rel="stylesheet" href="text/product.css" type="text/css"/>
+    <link rel="stylesheet" href="text/magiczoomplus.css" type="text/css"/>
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/common/mzp-packed.js"></script>
+    <script type="text/javascript"
+            src="http://www.ido.ac.cn/login/js/common/jquery.form.js"></script>
+    <script type="text/javascript" src="http://www.ido.ac.cn/login/js/common/zoom.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+
+</head>
+<body>
+<div class="toper">
+    <div class="toper_login">
+        "您好，欢迎来到OVO直供网！"
+        <a href="#login" data-toggle="login" class="a">[请登录]</a>
+        <a href="/signUp.html">[现在注册]</a>
+    </div>
+    <div class="toper_link">
+        <div class="toper_cart">
+            <a href="/cart.html">购物车
+                <span class="badge"> 5</span></a>
+            <a href="/order.html">我的订单 <span class="badge"> 2</span></a>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-left">
+        <img src="http://www.ido.ac.cn/images/ovo.png" class="header-logo"/>
+        <a href="/index.html" class="header-title">OVO</a>
+        <p class="header-title-motto">移动终端一站采购平台</p>
+    </div>
+    <div class="header-middle">
+        <input class="search_Box" type="text" value placeholder="请输入商品进行搜索" name="keyword" id="keyword">
+        <div class="header-middle-right">
+            <input type="button" class="search_Btn" value="搜索" onclick="">
+        </div>
+
+    </div>
+    <div class="header-right">
+        <img class="header-contract" src="">
+    </div>
+</div>
+<!-- 快捷栏 -->
+<div class="nav">
+    <div class="nav_cate" id="nav_cate" >
+        <button type="button" class="btn nav_category_title dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">所有产品分类</button>
+        <ul class="dropdown-menu nav_categ" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation" class="dropdown-header">热销手机</li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="">iPhoneX</a>
+                <a role="menuitem" tabindex="-1" href="">MIX 2</a>
+                <a role="menuitem" tabindex="-1" href="">iPhone8</a>
+                <a role="menuitem" tabindex="-1" href="">HUAWEI MATE 9</a>
+                <a role="menuitem" tabindex="-1" href="">OPPO R11s</a>
+            </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">
+                手机品牌
+            </li>
+            <li role="presentation" >
+                <a role="menuitem" tabindex="-1" href="">苹果</a>
+                <a role="menuitem" tabindex="-1" href="">华为</a>
+                <a role="menuitem" tabindex="-1" href="">小米</a>
+                <a role="menuitem" tabindex="-1" href="">OPPO</a>
+                <a role="menuitem" tabindex="-1" href="">VIVO</a>
+                <a role="menuitem" tabindex="-1" href="">联想</a>
+                <a role="menuitem" tabindex="-1" href="">魅族</a>
+                <a role="menuitem" tabindex="-1" href="">三星</a>
+                <a role="menuitem" tabindex="-1" href="">LG</a>
+                <a role="menuitem" tabindex="-1" href="">索尼</a>
+                <a role="menuitem" tabindex="-1" href="">一加</a>
+            </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">
+                价格预算
+            </li>
+            <li>
+                <a role="menuitem" tabindex="-1" href="">5000元以上</a>
+                <a role="menuitem" tabindex="-1" href="">3000-5000元</a>
+                <a role="menuitem" tabindex="-1" href="">2000-3000元</a>
+                <a role="menuitem" tabindex="-1" href="">2000元以内</a>
+            </li>
+            <li class="divider" role="presentation"></li>
+            <li role="presentation" class="dropdown-header">网络制式</li>
+            <li>
+                <a role="menuitem" tabindex="-1" href="">移动4G  </a>
+                <a role="menuitem" tabindex="-1"  href="">联通4G</a>
+                <a role="menuitem" tabindex="-1" href="">电信4G  </a>
+                <a role="menuitem" tabindex="-1" href="">全网通  </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav_section">
+        <ul>
+            <li>
+                <a href="/index.html">首页</a>
+            </li>
+            <li>
+                <a href="">热门机型</a>
+            </li>
+
+            <li>
+                <a href="">苹果专区</a>
+            </li>
+            <li>
+                <a href="">安卓专区</a>
+            </li>
+            <li>
+                <a href="">我的直供</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/javascript" src="js/common/autosize_Img.js"></script>
+<div class="main">
+    <!--<div class="box">
+        <div class="left-pro">
+            <div class="t1">
+                <img src="images/gotop.gif" id="gotop" />
+                <div id="showArea">
+                    <a href="images/img01.jpg" rel="zoom1" rev="images/img01.jpg"><img src="images/img01s.jpg" /></a>
+                    <a href="images/img02.jpg" rel="zoom1" rev="images/img02.jpg"><img src="images/img02s.jpg" /></a>
+                    <a href="images/img03.jpg" rel="zoom1" rev="images/img03.jpg"><img src="images/img03s.jpg" /></a>
+                    <a href="images/img01.jpg" rel="zoom1" rev="images/img01.jpg"><img src="images/img01s.jpg" /></a>
+                    <a href="images/img02.jpg" rel="zoom1" rev="images/img02.jpg"><img src="images/img02s.jpg" /></a>
+                    <a href="images/img03.jpg" rel="zoom1" rev="images/img03.jpg"><img src="images/img03s.jpg" /></a>
+                    <a href="images/img01.jpg" rel="zoom1" rev="images/img01.jpg"><img src="images/img01s.jpg" /></a>
+                    <a href="images/img02.jpg" rel="zoom1" rev="images/img02.jpg"><img src="images/img02s.jpg" /></a>
+                </div>
+                <img src="images/gobottom.gif" id="gobottom"  />
+            </div>
+            <div class="t2">
+                <a href="images/img01.jpg" id="zoom1" class="MagicZoom MagicThumb"><img src="images/img01.jpg" id="main_img" class="main_img" style="width:400px; height:400px;" /></a>
+            </div>
+        </div>
+
+    </div>
+    <div style="clear:both;"></div>
+    <script type="text/javascript" src="js/common/zzsc.js"></script>
+    <div class="product_context">
+
+    </div>
+    -->
+    <div class="productdetail_img" id="preview">
+        <div class="jqzoom" id="spec-n1">
+            <img src="images/img01.jpg" jqimg="images/img01.jpg" onerror="this.src='images/img01.jpg';" alt="">
+            <span class="icon_links" id="brandPicture"></span>
+        </div>
+        <div class="detail_screen" id="spec-n5">
+            <div class="icog_bg icog_prev"></div>
+            <div class="icog_bg icog_next"></div>
+            <div id="spec-list" class="screenimg">
+                <ul style="width: 80px;">
+                    <li><span class="hover"><img onerror="this.src='images/img01.jpg';" src="images/img01.jpg" alt="点击查看"></span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="product_detail">
+        <h3 class="product_title">苹果 iPhone X （太空灰）</h3>
+        <div class="product_price">
+            <p>销售价：<span>￥</span></p>
+            <h3>1800</h3>
+            <p>促销优惠：</p>
+            <h4>满800减20</h4>
+        </div>
+        <script type="text/javascript">
+            function editQuantity(e,mount) {
+                if(mount==1)
+                    document.getElementById(e).value=document.getElementById(e).value-(-1);
+                else if(document.getElementById(e).value!=0)
+                    document.getElementById(e).value=document.getElementById(e).value-1;
+
+            }
+        </script>
+        <div class="productdetail_num">
+            <dl class="pro_color">
+                <dt>
+                    机身颜色：
+                </dt>
+                <dd id="SameProductDifColor">
+                    <a href="" title="月光银">月光银</a>
+                    <a href="" title="香槟金" class="on">香槟金</a>
+                </dd>
+            </dl>
+            <dl class="pro_num">
+                <dt>购买数量：</dt>
+                <dd class="num_txt">
+                    <button class="minus" onclick="editQuantity('inputCount', -1);">-</button>
+                    <span><input type="text" id="inputCount" value="1" size="4" class="num"></span>
+                    <button class="add" onclick="editQuantity('inputCount', 1);">+</button>
+                </dd>
+                <dd>件</dd>
+            </dl>
+        </div>
+
+        <div class="product_operation">
+            <button class="button_putToCart" >加入购物车</button>
+            <button class="button_toBuy">立即购买</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="tabbable" id="tabs-527584">
+                    <ul class="nav nav-tabs navg">
+                        <li class="active">
+                            <a href="#panel-266894" data-toggle="tab">商品详情</a>
+                        </li>
+                        <li>
+                            <a href="#panel-92023" data-toggle="tab">历史价格变化</a>
+                        </li>
+                        <li>
+                            <a href="#panel-920233" data-toggle="tab">用户评价</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-266894">
+                            <ul>
+                                <li><img src="images/pro-detail-img.jpg" alt=""></li>
+                                <li><img src="" alt=""></li>
+                                <li><img src="" alt=""></li>
+                                <li><img src="" alt=""></li>
+                                <li><img src="" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="panel-92023">
+
+                        </div>
+                        <div class="tab-pane" id="panel-920233">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="media">
+                                        <a href="#" class="pull-left"><img src="images/ovo.png" class="media-object" alt='' /></a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                Nested media heading
+                                            </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                            <div class="media">
+                                                <a href="#" class="pull-left"><img src="images/tag1.jpg" class="media-object" alt='' /></a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        Nested media heading
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="media">
+                                        <a href="#" class="pull-left"><img src="images/ovo.png" class="media-object" alt='' /></a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                Nested media heading
+                                            </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                            <div class="media">
+                                                <a href="#" class="pull-left"><img src="images/tag1.jpg" class="media-object" alt='' /></a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        Nested media heading
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="media">
+                                        <a href="#" class="pull-left"><img src="images/ovo.png" class="media-object" alt='' /></a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                Nested media heading
+                                            </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                            <div class="media">
+                                                <a href="#" class="pull-left"><img src="images/tag1.jpg" class="media-object" alt='' /></a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        Nested media heading
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <span class="badge">热</span>
+                                    <div class="media">
+                                        <a href="#" class="pull-left"><img src="images/ovo.png" class="media-object" alt='' /></a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                Nested media heading
+                                            </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                            <div class="media">
+                                                <a href="#" class="pull-left"><img src="images/tag1.jpg" class="media-object" alt='' /></a>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        Nested media heading
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="warning">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-8 column">
+                        <a id="modal-157489" href="#modal-container-157489" role="button" class="btn" data-toggle="modal">触发遮罩窗体</a>
+
+                        <div class="modal fade" id="modal-container-157489" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            提醒
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        如您想购买物品，请先登录！
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" onclick="javascript:window.location.href'http://www.ido.ac.cn/login/login.html';">去登陆</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 column">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/common/picshow.js" type="text/javascript"></script>
+</body>
+</html>

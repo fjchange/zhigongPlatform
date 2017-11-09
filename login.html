@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OVO终端直供平台</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.ido.ac.cn/images/favicon.ico" data-reactid="10"/>
+    <link href="http://www.ido.ac.cn/login/text/base.css" rel="stylesheet" type="text/css" />
+    <link  rel="stylesheet" href="text/login.css"type="text/css" />
+
+    <script type="text/javascript"
+            src="http://www.ido.ac.cn/login/js/common/jquery.form.js"></script>
+    <script type="text/javascript"
+            src="http://www.ido.ac.cn/login/js/common/jquery-1.4.min.js"></script>
+    <script type="text/javascript">
+        function isMobileNum(str){
+            var myreg=/^((([1-2][0-9]{2})|159|153)+\d{8})$/;
+            return myreg.test(str);
+        }
+        function submitLoginButton() {
+            var now=$("#password").val();
+            var re=new RegExp("^(?![a-zA-Z0-9]+$)(?![^a-zA-Z/D]+$)(?![^0-9/D]+$)");
+            var len=re.test(now);
+            if(len==false){
+                if(isMobileNum($('#loginName').val())==false||$('#loginName').val().length!=11){
+                    alert("请输入正确的会员账号，会员账号只能是手机号！");
+                }
+                else{
+                    window.location="/"
+                }
+            }
+            else{
+                $('#loginForm').ajaxForm({
+                    type: 'post',
+                    error: function () {
+                    },
+                    beforeSubmit: submitLoginForm,
+                    success: submitLoginFinish
+                }).submit();
+            }
+        }
+        function inputOnBlur(){
+            var is=isMobileNum($("#loginName").val());
+            if(!is){
+                alert("请输入正确的会员账号，会员账号只能是手机号！");
+            }
+        }
+        function checkCode(){
+            var code=$("#validateCode").val();
+            var xmlhttp=new XMLHttpRequest();
+            if(code.length!=4){
+                alert("请输入完整验证码！");
+            }
+            else{
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        var response=xmlhttp.responseText;
+                        $("#warning").innerHTML=response;
+                        if (response=="1"){
+                            $("#label_code").disabled(false);
+
+                        }
+                        else
+                            alert("请输入正确的验证码！");
+                    }
+                }
+                xmlhttp.open("GET","validateCheckCode.php?validateCode="+code,true);
+                xmlhttp.send();
+            }
+
+        }
+        function labelOnFocus() {
+            document.getElementById("label_code").innerHTML="";
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="login_wrap">
+        <h2 class="login_title">会员登陆
+        </h2>
+        <div class="login_form">
+            <form method="post" id="loginForm" name="loginForm">
+                <input type="hidden" name="fromurl" value="" id="fromurl" />
+                <input name="loginType" id="loginType" type="hidden" value="08"/>
+                <ul>
+                    <li>
+                        <input type="text" id="loginName" placeholder="账号" class="l_txt grid-28" maxlength="32" autocomplete="off" onblur="inputOnBlur()" onfocus="inputOnFocus(this)"/>
+                    </li>
+                    <li>
+                        <input type="password" id="password" placeholder="密码" class="l_txt grid-28" maxlength="32" autocomplete="off" onblur="" />
+                    </li>
+                    <li class="p_code">
+                        <label for="validateCode" id="label_code">验证码</label>
+                        <input type="text" id="validateCode" placeholder="验证码" class="validateCode" name="validateCode"  maxlength="6" autocomplete="false" onfocus="labelOnFocus()" onblur="checkCode()"/>
+                        <img id="imgValidatecode" class="img_code" width="110" height="35" onclick="this.src='checkcode.php?nocache='+Math.random();" src="checkcode.php" alt="验证码"  />
+                    </li>
+                    <li>
+                        <p class="warning"></p>
+                    </li>
+                </ul>
+                <p class="login_btn">
+                    <li>
+                        <input type="button" id="sumitBtn" onclick="submitLoginButton()" disabled="true" name="btnLogin" value="登 陆" />
+                    </li>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
