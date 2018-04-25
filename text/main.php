@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="text/basic.css" type="text/css"/>
-    <link rel="stylesheet" href="text/index.css" type="text/css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="http://www.ido.ac.cn/images/favicon.ico" data-reactid="10"/>
-    <script type="text/javascript"
+    <link rel="stylesheet" href="/text2/index.css" type="text/css"/>
+    <link rel="stylesheet" href="/text2/basic.css" type="text/css"/>
+    <link rel="shortcut icon" type="/image/x-icon" href="http://www.ido.ac.cn/images/favicon.ico" data-reactid="10"/>
+    <link rel="stylesheet" href="/text2/index_login.css" type="text/css"/>
+    <script type="/text/javascript"
             src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript"
+    <script type="/text/javascript"
             src="http://www.ido.ac.cn/login/js/common/jquery.form.js"></script>
-    <script type="text/javascript" src="http://www.ido.ac.cn/login/js/common/zoom.js"></script>
+    <script type="/text/javascript" src="http://www.ido.ac.cn/login/js/common/zoom.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
     </script>
@@ -22,14 +23,14 @@
     <div class="toper">
         <div class="toper_login">
             "您好，欢迎来到OVO直供网！"
-            <a href="#login" data-toggle="login" class="a">[请登录]</a>
-            <a href="/signUp.html">[现在注册]</a>
+            <a href="/index.php/login " data-toggle="login" class="a"><?php echo $str;?></a>
+            <a href="/index.php/register" target='_blank'>[现在注册]</a>
         </div>
         <div class="toper_link">
             <div class="toper_cart">
-                <a href="/cart.html">购物车
-                    <span class="badge">5</span></a>
-                <a href="/order.html">我的订单<span class="badge">2</span></a>
+                <a href="/index.php/custom/shopcar" target='_blank'>购物车</a>
+                <a href="/index.php/login/information" target='_blank'>个人中心</a>
+                <a href="/index.php/login/login_out">注销</a>
             </div>
         </div>
     </div>
@@ -42,27 +43,16 @@
             <p class="header-title-motto">移动终端一站采购平台</p>
         </div>
         <div class="header-middle">
-            <input class="search_Box" type="text" value placeholder="请输入商品进行搜索" name="keyword" id="keyword">
-            <div class="header-middle-right">
-                <input type="button" class="search_Btn" value="搜索" onclick="">
-            </div>
-
+        	<form action="/index.php/main/search_product" method="post">
+            <input class="search_Box" type="text"  placeholder="请输入商品进行搜索" name="keyword" id="keyword">
+            <input type="submit" class="search_Btn" value="搜索" name="search">
+            </form>
         </div>
         <div class="header-right">
             <img class="header-contract" src="https://img10.360buyimg.com/n1/s180x180_jfs/t8161/224/1169699991/177635/eb2192c2/59b64641N088dd6ad.jpg">
         </div>
     </div>
     <!-- 快捷栏 -->
-    <!--
-    <ul class="nav  nav-tabs nav-justified nav_new">
-        <li class="active" style="background-color: #FFAE00"><a href="#">所有产品分类</a></li>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">热门机型</a></li>
-        <li><a href="#">苹果专区</a></li>
-        <li><a href="#">安卓专区</a></li>
-        <li><a href="#">我的直供</a></li>
-    </ul><br><br><br>
--->
     <div class="navg nav">
         <div class="nav_cate" id="nav_cate" >
             <button type="button" class="btn nav_category_title dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown">所有产品分类</button>
@@ -191,29 +181,30 @@
                 </ul>
             </div>
 
+
         </div>
         <div class="banner" style="position: relative;overflow: hidden;width: 975px;">
             <ul id="slider" class="slider">
                 <li >
                     <a href="">
-                        <img src="http://www.ido.ac.cn/login/images/banner1.jpg">
+                        <a href=""><img src="/images/slider_1.jpg" style="max-width:100%;" alt="">
                     </a>
                 </li>
                 <li>
                     <a>
-                        <img src="http://www.ido.ac.cn/login/images/banner2.jpg">
+                        <a href=""><img src="/images/slider_2.jpg" style="max-width:100%;" alt="">
                     </a>
                 </li>
                 <li>
-                    <a href=""><img src="http://www.ido.ac.cn/login/images/banner3.jpg" alt=""></a>
+                    <a href=""><img src="/images/slider_3.jpg" style="max-width:100%;" alt=""></a>
                 </li>
             </ul>
             <div class="con"></div>
             <div class="bx left">
-                <img src="images/left.png">
+                <img src="/images/left.png">
             </div>
             <div class="bx right">
-                <img src="images/right.png">
+                <img src="/images/right.png">
             </div>
             <div class="bx-pager">
             </div>
@@ -221,73 +212,37 @@
         </div>
         <div class="more mb30">
             <div class="new">
-                <a href=""><img src="http://www.ido.ac.cn/login/images/tag1.jpg" alt=""></a>
+                <a href=""><img src="/images/222.jpg" style="max-width:100%;" alt=""></a>
             </div>
             <div>
-                <a href=""><img src="http://www.ido.ac.cn/login/images/tag2.jpg" alt=""></a>
+                <a href=""><img src="/images/333.png" style="max-width:100%;" alt=""></a>
             </div>
             <div>
-                <button  type="button" class="btn" data-toggle="collapse" data-target="#notice"   style="background-color: red"><img src="http://www.ido.ac.cn/login/images/tag3.jpg" alt=""></button>
+                <!--<button  type="button" class="btn" data-toggle="collapse" data-target="#notice"   style="background-color: red">-->
+                <img src="/images/555.png" style="max-width:100%;" alt="">
             </div>
         </div>
         <div class="panel-collapse collapse" id="notice">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <div class="tabbable" id="tabs-527584">
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#panel-266894" data-toggle="tab">热点资讯</a>
-                            </li>
-                            <li>
-                                <a href="#panel-92023" data-toggle="tab">促销资讯</a>
-                            </li>
-                            <li>
-                                <a href="#panel-920235" data-toggle="tab">奖励资讯</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="panel-266894">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>Tanmay</td>
-                                        <td>Bangalore</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sachin</td>
-                                        <td>Mumbai</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="tab-pane" id="panel-92023">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>Tanmay</td>
-                                        <td>Bangalore</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sachin</td>
-                                        <td>Mumbai</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="tab-pane" id="panel-920235">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>Tanmay</td>
-                                        <td>Bangalore</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sachin</td>
-                                        <td>Mumbai</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="notice_title">
+                <ul>
+                    <li>
+                        <a href="" class="RDZX">热点资讯</a>
+                    </li>
+                    <li>
+                        <a href="" class="CXZX">促销资讯</a>
+                    </li>
+                    <li>
+                        <a href="" class="JLZX">奖励资讯</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="notice_list">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
             </div>
         </div>
         <div class="product_list" >
@@ -300,51 +255,40 @@
                 <ul class="index_product_list">
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f085c324a69.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">iphone8 金色（4.7英寸）</a>
+                                    <h3>零售价：￥5999</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f088cd5442a.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">iphone6s 玫瑰金（4.7英寸）</a>
+                                    <h3>零售价：￥3999</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0894cd403c.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">华为青春版 白色（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0899aa5ba7.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">小米note4 香槟金（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
                                 </h2>
                             </dd>
 
@@ -352,10 +296,10 @@
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08ade087f7.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">小米6 亮黑色（5.5英寸）</a>
+                                    <h3>零售价：￥899</h3>
                                 </h2>
                             </dd>
 
@@ -363,20 +307,31 @@
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08a1f7ec8e.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">三星note 金色（5英寸）</a>
+                                    <h3>零售价：￥1299</h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0894cd403c.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">华为mate8</a>
+                                    <h3>零售价：￥1599</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59fe882e53132.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">华为畅享6s</a>
+                                    <h3>零售价：￥1299</h3>
                                 </h2>
                             </dd>
                         </dl>
@@ -391,30 +346,40 @@
                 <ul class="index_product_list">
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="http://www.189zg.cn/prodphoto/7/29668/29668_1496219768412_1.jpg" alt="" onerror="this.src='/images/js/base/nopic_1.jpg'"></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f085c324a69.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href="">魅族 魅蓝NOTE5 800M版 香槟金</a>
-                                    <h3>零售价：¥1590</h3>
+                                <h2><a href="">iphone8 金色（4.7英寸）</a>
+                                    <h3>零售价：￥5999</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f088cd5442a.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">iphone6s 玫瑰金（4.7英寸）</a>
+                                    <h3>零售价：￥3999</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0894cd403c.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">华为青春版 白色（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0899aa5ba7.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">小米note4 香槟金（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
                                 </h2>
                             </dd>
 
@@ -422,56 +387,48 @@
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08ade087f7.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">小米6 亮黑色（5.5英寸）</a>
+                                    <h3>零售价：￥899</h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08a1f7ec8e.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">三星note 金色（5英寸）</a>
+                                    <h3>零售价：￥1299</h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59fe882e53132.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">华为mate8</a>
+                                    <h3>零售价：￥1599</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59fe882e53132.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">华为畅享6s</a>
+                                    <h3>零售价：￥1299</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                 </ul>
-                <div class="index_product_ad"><a href=""><img src="" alt=""></a></div>
+               <div class="index_product_ad"><a href=""><img src="http://www.189zg.cn/attachments/adv/415/129/%E7%95%85%E4%BA%AB7p.jpg" alt=""></a></div>
 
             </div>
             <div class="index_title title_g">
@@ -481,10 +438,40 @@
                 <ul class="index_product_list">
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f085c324a69.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">iphone8 金色（4.7英寸）</a>
+                                    <h3>零售价：￥5999</h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f088cd5442a.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">iphone6s 玫瑰金（4.7英寸）</a>
+                                    <h3>零售价：￥3999</h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0894cd403c.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">华为青春版 白色（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
+                                </h2>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f0899aa5ba7.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">小米note4 香槟金（5英寸）</a>
+                                    <h3>零售价：￥1099</h3>
                                 </h2>
                             </dd>
 
@@ -492,76 +479,48 @@
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08ade087f7.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">小米6 亮黑色（5.5英寸）</a>
+                                    <h3>零售价：￥899</h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59f08a1f7ec8e.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">三星note 金色（5英寸）</a>
+                                    <h3>零售价：￥1299</h3>
+                                </h2>
+                            </dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><a href="" class="img_tj"><img src="/image/59fe882e53132.jpg" alt=""></a></dt>
+                            <dd class="index_val">
+                                <h2><a href="">华为mate8</a>
+                                    <h3>零售价：￥1599</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                     <li>
                         <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
+                            <dt><a href="" class="img_tj"><img src="/image/59fe882e53132.jpg" alt=""></a></dt>
                             <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
-                                </h2>
-                            </dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt><a href="" class="img_tj"><img src="" alt=""></a></dt>
-                            <dd class="index_val">
-                                <h2><a href=""></a>
-                                    <h3></h3>
+                                <h2><a href="">华为畅享6s</a>
+                                    <h3>零售价：￥1299</h3>
                                 </h2>
                             </dd>
                         </dl>
                     </li>
                 </ul>
-                <div class="index_product_ad"><a href=""><img src="" alt=""></a></div>
+               <div class="index_product_ad"><a href=""><img src="http://www.189zg.cn/attachments/adv/415/129/%E7%95%85%E4%BA%AB7p.jpg" alt=""></a></div>
 
             </div>
         </div>

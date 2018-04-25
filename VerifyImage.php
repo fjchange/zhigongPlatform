@@ -48,17 +48,13 @@ class VerifyImage
         $m_image = imagecreatetruecolor($width, $height);
         $white = imagecolorallocate($m_image, 255, 255, 255);
         imagefill($m_image, 0, 0, $white);
-//        注意：将字体导入到fonts目录下
-//        $font_files = array(dirname(__FILE__).'/fonts/AGENCYB.TTF',dirname(__FILE__). '/fonts/svgafix.fon');
         $font=dirname(__FILE__).'/fonts/CHILLER.TTF';
         for($i = 0; $i < $code_length; $i++) {
             $size = mt_rand(30,35);
             $angle = mt_rand(-25, 25);
-//            将字符串显示到一个居中的位置
             $x = (imagefontwidth($size) + 5) * ($i + 1);
             $y = ($height - imagefontheight($size)) / 2 + rand($size/2,$size/3*2);
             $color = imagecolorallocate($m_image, mt_rand(0, 150), mt_rand(0, 150), mt_rand(0, 150));
-            //$font = $font_files[mt_rand(0, count($font_files)-1)];
             $text = substr($m_verify_code, $i, 1);
             imagettftext($m_image, $size, $angle, $x, $y, $color, $font, $text);
         }
